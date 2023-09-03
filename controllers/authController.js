@@ -76,7 +76,7 @@ exports.login = catchAsync(async(req,res,next) => {
     // 1. Check if email and password exist
     //console.log(email,password);
     if(!email || !password){
-        res.status(400).json({
+        return res.status(400).json({
             status : "fail",
             data : {
                 message : "Please provide email and password..."
